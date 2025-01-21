@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #1aac83;
+    --secondary: #7b7b7b;
+    --error: #e7195a;
+    --background: #f9f9f9;
+    --text: #333;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+    --transition: 0.3s ease-in-out;
+}
+
+body {
+    background: var(--background);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px var(--card-shadow);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.pages {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.Home {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out the workouts and form */
+    align-items: flex-start; /* Align items at the top */
+    gap: 30px; /* Increase space between sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 30px 0; /* Add margin for spacing around the content */
+  }
+
+  .workouts {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column; /* Ensure workout details stack vertically */
+    gap: 20px; /* Space between individual workout items */
+    max-width: 100%; /* Ensure it doesn't stretch too wide on large screens */
+  }
+
+.workout-details {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0px 4px 12px var(--card-shadow);
+    position: relative;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.workout-details:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.workout-details h4 {
+    margin: 0 0 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.workout-details p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+.workout-details span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background: var(--background);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--text);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background var(--transition);
+}
+
+.workout-details span:hover {
+    background: #eee;
+}
+
+.form-container {
+    flex: 0 0 300px; /* Fixed width for form container */
+    max-width: 100%; /* Ensure it doesn't stretch too wide on large screens */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 12px var(--card-shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure form elements stack vertically */
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+form h3 {
+    font-size: 1.6rem;
+    color: var(--text);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%; /* Full width within the container */
+    max-width: 100%; /* Prevents any overflow */
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: var(--background);
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border var(--transition);
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+form input:focus {
+    border: 1px solid var(--primary);
+    outline: none;
+}
+
+form button {
+    background: var(--primary);
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border: 0;
+    font-family: "Poppins";
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+form button:hover {
+    background: #159e72;
+}
+
+div.error {
+    padding: 10px;
+    background: #ffefef;
+    color: var(--error);
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+input.error {
+    border: 1px solid var(--error);
+}
